@@ -142,4 +142,22 @@ document.getElementById('scanBtn').addEventListener('click', fakePortScan);
 
 /* Başlangıçta geçmişi göster */
 renderHistory();
+// Kontrol Et butonu
+document.getElementById("checkBtn").addEventListener("click", function() {
+    var audio = document.getElementById("clickSound");
+    audio.play();
+});
+
+// Şifre Oluştur butonu
+document.getElementById("generateBtn").addEventListener("click", function() {
+    var audio = document.getElementById("clickSound");
+    audio.play();
+});
+
+// Tarama Başlat butonu
+document.getElementById("scanBtn").addEventListener("click", function() {
+    var audio = document.getElementById("clickSound");
+    audio.play();
+});
+
 
