@@ -1,0 +1,96 @@
+/* Temel stil */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    margin: 0;
+    padding: 20px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Topbar */
+.topbar {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.topbar h1 { margin: 0; font-size: 20px; }
+#themeToggle { background: transparent; border: none; font-size: 20px; cursor: pointer; }
+
+/* Konteyner */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(0,0,0,0.45);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Araç kutuları */
+.tool {
+    margin-bottom: 22px;
+    background-color: rgba(255,255,255,0.04);
+    padding: 16px;
+    border-radius: 10px;
+}
+.tool h2 { margin-top: 0; }
+
+/* Row düzen */
+.row { display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; }
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    min-width: 200px;
+}
+
+/* Buton */
+button {
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: transform .12s ease, background-color .12s ease;
+}
+button:hover { transform: translateY(-3px); background-color: #ff4757; }
+
+/* Meter (şifre gücü çubuğu) */
+.meter { width: 100%; max-width:320px; height: 10px; background: rgba(255,255,255,0.12); border-radius: 8px; margin: 10px auto; }
+#pwMeter { height:100%; width:0%; border-radius:8px; transition: width .3s ease, background .3s ease; }
+
+/* Scan progress */
+.scanProgress { width: 100%; max-width:320px; height: 8px; background: rgba(255,255,255,0.12); margin:10px auto; border-radius:8px; overflow:hidden; }
+#scanBar { height:100%; width:0%; background: linear-gradient(90deg,#6be5a3,#4dd0e1); transition: width .4s ease; }
+
+/* Pre area */
+pre { text-align:left; background: rgba(0,0,0,0.3); padding:10px; border-radius:6px; max-height:200px; overflow:auto; }
+
+/* History list */
+#historyList { list-style:none; padding: 0; margin: 8px 0; max-height:120px; overflow:auto; }
+#historyList li { background: rgba(255,255,255,0.03); margin:6px 0; padding:8px; border-radius:6px; font-size:14px; }
+
+/* Responsive */
+@media (max-width:600px){
+    .container { padding: 16px; }
+    input[type="text"], input[type="password"] { min-width: 140px; width: 100%; }
+    .row { flex-direction: column; gap:6px; }
+}
+
+/* Light tema sınıfı */
+body.light {
+    background: linear-gradient(135deg,#f6d365,#fda085);
+    color: #222;
+}
+body.light .container { background: rgba(255,255,255,0.9); color:#222; }
+body.light button { background-color: #4d6bff; color: white; }
